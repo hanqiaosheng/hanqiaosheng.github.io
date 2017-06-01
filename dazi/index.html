@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>打字游戏</title>
+        <script src="js/common.js"></script>
+        <script src="js/dzyx.js"></script>
+    </head>
+    <style>
+        body{
+            background-image: url(img/148.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        .shengming{
+            margin: 20px;
+            font-size: 25px;
+            color: darkred;
+        }
+        .fenshu{
+            margin: 20px;
+            font-size: 25px;
+            color: darkred;
+        }
+        .guanqianm{
+            margin: 20px;
+            font-size: 25px;
+            color: darkred;
+        }
+        .yun{
+            width: 1200px;
+            height: 70px;
+            border-radius: 35px;
+            position: absolute;
+            top: 0px;
+            left: 170px;
+            z-index: 999;
+            animation: yun 2s ease infinite alternate;
+        }
+        @keyframes yun {
+            from{
+                transform: translate(-30px);
+            }
+            to{
+                transform: translate(30px);
+            }
+        }
+        .yun>img{
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            border-radius: 35px;
+        }
+    </style>
+    <body>
+    生命值:<div class="shengming"><span>10</span></div>
+    分数:<div class="fenshu"><span>0</span></div>
+    关卡:<div class="guanqianm"><span>1</span></div>
+    <div class="yun">
+        <img src="img/12.png" alt="">
+    </div>
+    </body>
+</html>
+<script>
+   let game=new Game();
+   game.start();
+</script>
